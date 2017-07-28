@@ -17,6 +17,10 @@ defmodule ExPublicKey do
     end
   end
 
+  def load_string(string) do
+    ExPublicKey.loads(string)
+  end
+
   def load(file_path) do
     case File.read(file_path) do
       {:ok, key_string} ->
